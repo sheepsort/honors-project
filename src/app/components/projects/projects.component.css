@@ -1,0 +1,12 @@
+/* Project component styles */
+
+.card-deck {
+    height: 200px;
+    border-style: hidden;
+}
+.card-body {
+    width: 225px;
+}
+.card {
+    border-style: hidden;
+}
