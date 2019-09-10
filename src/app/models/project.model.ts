@@ -1,8 +1,8 @@
 export class Project {
     projectName: string;
-    githubUrl: string;
+    githubUrl?: string;
     description: string;
-    id: number;
+    id?: number;
 
     // All Projects should have each of these props when created with the new Project command
     constructor(name: string, github: string, desc: string, id: number) {
