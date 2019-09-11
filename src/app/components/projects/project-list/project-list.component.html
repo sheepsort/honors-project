@@ -1,1 +1,22 @@
-<p>project-list works!</p>
+<!-- <div class="panel panel-default">
+    <div class="panel panel-body">
+        <!-- One card deck with dynamically modified contents, looped through with the *ngFor directive --
+        <div class="card-deck">
+            <div class="card" aria-label="Project Overview" *ngFor="let project of projects">
+                <div class="card-body">
+                    <button type="button" class="btn btn-secondary btn-lg form-control" (click)="onDisplayProject()">
+                        <h5 class="card-text">{{ project.projectName }}</h5>
+                    </button>
+                    <hr>
+                    <p class="card-text">{{ project.description }}</p>
+                    <a [href]="project.githubUrl" class="card-text"><small class="text-muted">GitHub</small></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="container-fluid">
+    <div class="d-flex flex-row flex-nowrap card-scroll-area">
+        <div class="card card-body" *ngFor="let project of projects">{{ project.projectName }}</div>
+    </div>
+</div>

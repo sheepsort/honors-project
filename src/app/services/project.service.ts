@@ -1,60 +1,79 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { Observable, throwError } from 'rxjs';
+import { Injectable } from '@angular/core';
+import { retry, catchError } from 'rxjs/operators';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import "rxjs/add/operator/map";
-import "rxjs/add/operator/catch";
-import "rxjs/add/observable/throw";
-
-import { IProjectService } from './IProject.service';
 import { Project } from '../models/project.model';
 
-const API_Address = 'http://localhost:3000';
+@Injectable({
+    providedIn: 'root'
+})
+export class ProjectService {
 
-@Injectable()
-export class ProjectService implements IProjectService {
-  constructor(private _http: HttpClient) {}
+    private API_Path: string = 'http://localhost:3000';
 
-  public GetAll(): Observable<Project[]> {
-    return (
-      this._http
-        .get(API_Address + '/projects')
-        .map(response => {
-          let projectList = response.json();
-          return projectList.map(project => new Project(project));
+    constructor(private http: HttpClient) { }
+
+    httpOptions = {
+        headers: new HttpHeaders({
+            'Content-Type': 'application/json'
         })
-        .catch(this.throw)
-    );
-  }
+    }
 
-  public Get(id: number): Observable<Project> {
-    return this._http
-      .get(`${API_Address}/projects/${id}`)
-      .map(response => {
-        return new Project(response.json());
-      })
-      .catch(this.throw);
-  }
+    public GetAllProjects(): Observable<Project[]> {
+        return this.http
+            .get<Project[]>(this.API_Path + '/projects')
+            .pipe(
+                retry(1),
+                catchError(this.throwError)
+            )
+    }
 
-  public Create(project: Project): Observable<Project> {
-    return this._http
-      .post(`${API_Address}/projects/${project}`)
-      .map(response => {
-        return new Project(response.json());
-      })
-      .catch(this.throw);
-  }
+    GetProject(id: number): Observable<Project> {
+        return this.http
+            .get<Project>(this.API_Path + '/projects/' + id)
+            .pipe(
+                retry(1),
+                catchError(this.throwError)
+            )
+    }
 
-  public Delete(id: number):Observable<boolean> {
-    this._http.delete(`${API_Address}/projects/${id}`);
-  }
+    CreateProject(project: Project): Observable<Project> {
+        return this.http
+            .post<Project>(this.API_Path + '/projects', JSON.stringify(project), this.httpOptions)
+            .pipe(
+                retry(1),
+                catchError(this.throwError)
+            )
+    }
 
-  public Update(id: number, project: Project): Observable<Project> {
-    this._http.put(`${API_Address}/projects/${id}`);
-  }
+    DeleteProject(id: number){
+        return this.http
+            .delete(this.http + '/projects/' + id, this.httpOptions)
+            .pipe(
+                retry(1),
+                catchError(this.throwError)
+            )
+    }
 
-  private throw(error: Response | any) {
-    console.error("ProjectService::throw", error);
-    return Observable.throw(error);
-  }
+    UpdateProject(id: number, project: Project): Observable<Project>{
+        return this.http
+            .put<Project>(this.API_Path + '/projects/' + id, JSON.stringify(project), this.httpOptions)
+            .pipe(
+                retry(1),
+                catchError(this.throwError)
+            )
+    }
+
+    throwError(error) {
+        let errorMessage = '';
+        if (error.error instanceof ErrorEvent){
+            errorMessage = error.error.message;
+        } else {
+            errorMessage = `Error Code: ${error.status}\nError Message: ${error.message}`;
+        }
+        console.log(errorMessage);
+        return throwError(errorMessage);
+    }
+
 }

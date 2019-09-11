@@ -1,0 +1,10 @@
+.card-body {
+    min-height: 300px;
+    min-width: 300px;
+    margin-right: 2rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.container-fluid {
+    background: black;
+}
