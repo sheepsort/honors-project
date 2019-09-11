@@ -1,0 +1,7 @@
+.card-body {
+    min-height: 200px;
+    min-width: 220px;
+    margin-right: 2rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

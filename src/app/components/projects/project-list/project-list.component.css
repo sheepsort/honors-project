@@ -1,12 +1,6 @@
-.card-body {
-    min-height: 200px;
-    min-width: 200px;
-    margin-right: 2rem;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
+
 .container-fluid {
-    background: black;
+    background: whitesmoke;
 }
 .card-scroll-area {
     overflow-x: auto;

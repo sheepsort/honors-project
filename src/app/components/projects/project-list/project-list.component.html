@@ -1,5 +1,5 @@
 <div class="container-fluid">
     <div class="d-flex flex-row flex-nowrap card-scroll-area">
-        <div class="card card-body" *ngFor="let project of projects">{{ project.projectName }}</div>
+        <app-project-card *ngFor="let projectElement of projects" [project]="projectElement"></app-project-card>
     </div>
 </div>
