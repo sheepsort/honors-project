@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Project } from '../../models/project.model';
 
 @Component({
@@ -11,14 +11,8 @@ export class ProjectsComponent implements OnInit {
   // bool value for displaying content; set to false to create white space until user interacts
   public show: boolean = false;
 
-  // Generic array of type Project:
-  // TODO: store this data as a JSON file on the 'backend,' to be retrieved with CRUD operations
-  projects: Project[] = [
-    new Project('Project One','github.com','Brief Description',123),
-    new Project('Project Two', 'https://github.com','Second Description, a little longer this time.',456),
-    new Project('Project Three', 'https://github.com','Third Description.',789),
-    new Project('Project Four', 'https://github.com','Hard coding a fourth description.',1010),
-  ];
+  // Generic array of type Project, to be removed when Project Detail component is finished.
+  projects: Project[] = [];
 
   constructor() { }
 
