@@ -8,51 +8,39 @@
         },
         {
             "id": 2,
-            "projectName": "Project One",
+            "projectName": "Project Two",
             "githubUrl": "https://github.com",
-            "description": "Project One's Description"
+            "description": "Project Two's Description"
         },
         {
             "id": 3,
-            "projectName": "Project One",
+            "projectName": "Project Three",
             "githubUrl": "https://github.com",
-            "description": "Project One's Description"
+            "description": "Project Three's Description"
         },
         {
             "id": 3,
-            "projectName": "Project One",
+            "projectName": "Project Four",
             "githubUrl": "https://github.com",
-            "description": "Project One's Description"
+            "description": "Project Four's Description"
         },
         {
             "id": 3,
-            "projectName": "Project One",
+            "projectName": "Project Alpha",
             "githubUrl": "https://github.com",
-            "description": "Project One's Description"
+            "description": "Project Five's Description"
         },
         {
             "id": 3,
-            "projectName": "Project One",
+            "projectName": "Project Six",
             "githubUrl": "https://github.com",
-            "description": "Project One's Description"
+            "description": "Project Six's Description"
         },
         {
             "id": 3,
-            "projectName": "Project One",
+            "projectName": "Project Seven",
             "githubUrl": "https://github.com",
-            "description": "Project One's Description"
-        },
-        {
-            "id": 3,
-            "projectName": "Project One",
-            "githubUrl": "https://github.com",
-            "description": "Project One's Description"
-        },
-        {
-            "id": 3,
-            "projectName": "Project One",
-            "githubUrl": "https://github.com",
-            "description": "Project One's Description"
+            "description": "Project Seven's Description"
         }
     ]
 }

@@ -27,7 +27,9 @@ import { DisplayProjectButtonComponent } from './components/projects/project-lis
     BrowserModule,
     HttpClientModule
   ],
-  providers: [ProjectService],
+  providers: [
+    ProjectService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

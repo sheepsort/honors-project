@@ -1,14 +1,8 @@
-<!-- Injecting the project card's specialized navbar: -->
 <app-project-navbar></app-project-navbar>
-<app-project-list></app-project-list>
-
-<!--TODO: abstract this content to Project Detail component-->
-<!--TODO: once abstracted, inject with <app-project-detail></app-project-detail>-->
-<ng-container *ngIf="show">
+<app-project-list (projectWasSelected)="selectedProject = $event"></app-project-list>
+<app-project-detail *ngIf="selectedProject; else infoText" [project]="selectedProject"></app-project-detail>
+<ng-template #infoText>
     <div class="card">
-        <div class="card-header">
-            <h3>{{ projects[0].projectName }}</h3>
-            <p class="card-text">{{ projects[0].description }}</p>
-        </div>
+        <p>Please select a project.</p>
     </div>
-</ng-container>
+</ng-template>
