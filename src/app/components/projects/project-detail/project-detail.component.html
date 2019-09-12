@@ -1,6 +1,11 @@
-<div class="card">
-    <div class="card-header">
-        <h3>{{ project.projectName }}</h3>
-        <p class="card-text">{{ project.description }}</p>
-    </div>
+<div class="card text-center">
+  <div class="card-header">
+    <h5>
+      {{ project.projectName }}
+    </h5>
+  </div>
+  <div class="card-body">
+    <p class="card-text text-left">{{ project.description }}</p>
+    <div class="card-footer text-muted">Link to GitHub</div>
+  </div>
 </div>
