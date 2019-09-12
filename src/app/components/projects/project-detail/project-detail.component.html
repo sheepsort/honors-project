@@ -1,11 +1,18 @@
-<div class="card text-center">
-  <div class="card-header">
-    <h5>
-      {{ project.projectName }}
-    </h5>
-  </div>
-  <div class="card-body">
-    <p class="card-text text-left">{{ project.description }}</p>
-    <div class="card-footer text-muted">Link to GitHub</div>
+<div class="container-fluid">
+  <div class="card text-center">
+    <div class="card-header">
+      <h5>
+        {{ project.projectName }}
+      </h5>
+    </div>
+    <div class="card-body">
+      <p class="card-text text-left">{{ project.description }}</p>
+      <div class="card-footer text-muted">
+        For a closer look under the hood: 
+        <a href={{project.githubUrl}} target="_blank">
+            This Project's Repo
+        </a>
+      </div>
+    </div>
   </div>
 </div>

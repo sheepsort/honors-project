@@ -11,6 +11,7 @@ import { ProjectNavbarComponent } from './components/projects/project-navbar/pro
 import { ProjectService } from './services/project.service';
 import { ProjectCardComponent } from './components/projects/project-list/project-card/project-card.component';
 import { DisplayProjectButtonComponent } from './components/projects/project-list/project-card/display-project-button/display-project-button.component';
+import { DefaultProjectComponent } from './components/projects/project-detail/default-project/default-project.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DisplayProjectButtonComponent } from './components/projects/project-lis
     ProjectDetailComponent,
     ProjectNavbarComponent,
     ProjectCardComponent,
-    DisplayProjectButtonComponent
+    DisplayProjectButtonComponent,
+    DefaultProjectComponent
   ],
   imports: [
     BrowserModule,

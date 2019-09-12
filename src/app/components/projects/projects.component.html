@@ -2,7 +2,5 @@
 <app-project-list (projectWasSelected)="selectedProject = $event"></app-project-list>
 <app-project-detail *ngIf="selectedProject; else infoText" [project]="selectedProject"></app-project-detail>
 <ng-template #infoText>
-    <div class="card">
-        <p>Please select a project.</p>
-    </div>
+  <app-default-project></app-default-project>
 </ng-template>

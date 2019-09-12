@@ -1,12 +1,11 @@
-a {
-  cursor: pointer;
-  color: #0b0900 !important;
-  text-decoration: underline;
-}
 .card {
   margin: 25px;
 }
 .container-fluid{
   background: #1e4769;
   padding: 15px;
+}
+a {
+  color: #232425 !important;
+  text-decoration: underline;
 }
