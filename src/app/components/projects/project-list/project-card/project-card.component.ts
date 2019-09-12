@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Project } from 'src/app/models/project.model';
 
 @Component({
@@ -8,9 +8,15 @@ import { Project } from 'src/app/models/project.model';
 })
 export class ProjectCardComponent implements OnInit {
   @Input() project: Project;
+  @Output() projectSelected = new EventEmitter<void>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelected() {
+    this.projectSelected.emit();
   }
 
 }

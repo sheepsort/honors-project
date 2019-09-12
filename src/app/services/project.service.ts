@@ -29,9 +29,9 @@ export class ProjectService {
             )
     }
 
-    GetProject(id: number): Observable<Project> {
+    GetProject(id: number): Observable<any> {
         return this.http
-            .get<Project>(this.API_Path + '/projects/' + id)
+            .get(this.API_Path + '/projects/' + id)
             .pipe(
                 retry(1),
                 catchError(this.throwError)

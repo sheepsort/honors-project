@@ -1,5 +1,5 @@
 <div class="container-fluid">
     <div class="d-flex flex-row flex-nowrap card-scroll-area">
-        <app-project-card *ngFor="let projectElement of projects" [project]="projectElement"></app-project-card>
+        <app-project-card *ngFor="let projectElement of projects" [project]="projectElement" (projectSelected)="onProjectSelect(projectElement)"></app-project-card>
     </div>
 </div>
