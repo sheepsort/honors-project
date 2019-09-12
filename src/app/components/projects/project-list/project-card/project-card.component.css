@@ -2,10 +2,18 @@
     min-height: 200px;
     min-width: 220px;
     margin-right: 2rem;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    background: #f8f9fa;
+    color: #202528;
+}
+.card-title {
+  color: #202528;
 }
 a {
     cursor: pointer;
     color: whitesmoke !important;
+}
+p {
+  min-height: 50px;
 }

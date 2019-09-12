@@ -4,43 +4,47 @@
             "id": 1,
             "projectName": "Project One",
             "githubUrl": "https://github.com",
-            "description": "Project One's Description"
+            "tagline": "Brief Description of Project One",
+            "tags" : [
+              "HTML5", "CSS3", "JavaScript", "React", "GraphQL"
+            ],
+            "description": "For this project, I built a widget using React JS for the front end. It interacts with external APIs using GraphQL as a middleware."
         },
         {
             "id": 2,
             "projectName": "Project Two",
             "githubUrl": "https://github.com",
-            "description": "Project Two's Description"
+            "tagline": "Project Two's Description"
         },
         {
             "id": 3,
             "projectName": "Project Three",
             "githubUrl": "https://github.com",
-            "description": "Project Three's Description"
+            "tagline": "Project Three's Description"
         },
         {
             "id": 3,
             "projectName": "Project Four",
             "githubUrl": "https://github.com",
-            "description": "Project Four's Description"
+            "tagline": "Project Four's Description"
         },
         {
             "id": 3,
             "projectName": "Project Alpha",
             "githubUrl": "https://github.com",
-            "description": "Project Five's Description"
+            "tagline": "Project Five's Description"
         },
         {
             "id": 3,
             "projectName": "Project Six",
             "githubUrl": "https://github.com",
-            "description": "Project Six's Description"
+            "tagline": "Project Six's Description"
         },
         {
             "id": 3,
             "projectName": "Project Seven",
             "githubUrl": "https://github.com",
-            "description": "Project Seven's Description"
+            "tagline": "Project Seven's Description"
         }
     ]
 }
