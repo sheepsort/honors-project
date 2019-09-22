@@ -22,13 +22,13 @@
         },
         {
             "id": 3,
-            "projectName": "Project Three",
-            "githubUrl": "https://github.com",
-            "tagline": "Project Three's Description",
+            "projectName": "Honors Project",
+            "githubUrl": "https://github.com/sheepsort/honors-project",
+            "tagline": "Using Angular to expand portfolio website",
             "tags" : [
-              "HTML5", "CSS3", "JavaScript", "React", "GraphQL"
+              "HTML5", "CSS3", "TypeScript", "Angular", "JSON", "RESTful Architecture"
             ],
-            "description": "For this project, I built a widget using React JS for the front end. It interacts with external APIs using GraphQL as a middleware."
+            "description": "For this project, I built a reusable display component that accepts data in the form of JSON notation. It will eventually be viewed live at my website, www.sheepsort.com, and was completed for the first of my three DMACC Honors Projects."
         },
         {
             "id": 3,
